@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+// import file to media cwery
+@import "_breakpoints.scss";
+
+// import create Custom-Scrollbars-&-Selection-color
+@import "_Custom-Scrollbars-&-Selection-color.scss";
+
+/*! start variables*/
+$colorNormal: #ffffff;
+$bgPage: #141519;
+$bg-card: #1f2630;
+$colorSubheading: #888;
+$bgCircle: #262f38;
+$bgbgCircleFocus: #7b8898;
+$bgButton: #fc7613;
+
+/*! end variables*/
+
+/*! start Global Rules*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+:root {
+  background-color: $bgPage;
+}
+/*! end Global Rules*/
+/*! main code*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.card {
+  display: block;
+  background-color: $bg-card;
+  width: 350px;
+  height: max-content;
+  padding: 30px;
+  margin: auto;
+  border-radius: 15px;
+  .icon {
+    background-image: url(../images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $bgCircle;
+    border-radius: 40px;
+    padding: 10px 20px;
+    max-width: 40px;
+    &:hover {
+      background-color: $colorNormal;
+      cursor: pointer;
+    }
+  }
+  .text {
+    p:first-child {
+      font: {
+        size: 20px;
+        weight: 700;
+      }
+      color: $colorNormal;
+      margin: 20px 0 0 0;
+    }
+    p:nth-child(2) {
+      font: {
+        size: 12px;
+        weight: 700;
+      }
+      color: $colorSubheading;
+      margin: 10px 0 30px;
+      line-height: 1.8;
+    }
+  }
+  .number {
+    margin: 15px 0;
+    .rating_number {
+      background-color: $bgCircle;
+      color: $colorSubheading;
+      border-radius: 50%;
+      padding: 15px 20px;
+      margin: 0 4px;
+      border: none;
+      max-width: 45px;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+      &:hover {
+        color: $colorNormal;
+        background-color: $bgButton;
+        cursor: pointer;
+      }
+      &:focus {
+        color: $colorNormal;
+        background-color: $bgbgCircleFocus;
+      }
+    }
+  }
+  #btn {
+    border: none;
+    border-radius: 30px;
+    background-color: $bgButton;
+    color: $colorNormal;
+    padding: 15px;
+    margin: 20px 0 0 0;
+    width: -webkit-fill-available;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px 3px $bgCircle;
+    font: {
+      size: 12px;
+      weight: 700;
+    }
+    &:hover {
+      background-color: $colorNormal;
+      color: $bgButton;
+      cursor: pointer;
+    }
+  }
+}
+
+.thankYou {
+  display: none;
+  background-color: $bg-card;
+  width: 350px;
+  height: max-content;
+  padding: 30px;
+  margin: auto;
+  border-radius: 15px;
+  text-align: center;
+  .rating {
+    color: $bgButton;
+    background-color: $bgCircle;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 10px auto;
+    font: {
+      size: 14px;
+      weight: 700;
+    }
+  }
+  .text_thankYou {
+    p:first-child {
+      font: {
+        size: 20px;
+        weight: 700;
+      }
+      color: $colorNormal;
+      margin: 20px 0 0 0;
+    }
+    p:nth-child(2) {
+      font: {
+        size: 12px;
+        weight: 700;
+      }
+      color: $colorSubheading;
+      margin: 10px 3px;
+      line-height: 1.8;
+    }
+  }
+}
+
+/*! start Attribution */
+.attribution {
+  position: absolute;
+  bottom: 5rem;
+  color: $bgbgCircleFocus;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 20px 0;
+  text-align: center;
+  width: -webkit-fill-available;
+  a {
+    font-size: smaller;
+    text-decoration: none;
+    color: $bgButton;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    &:hover::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 600;
+      content: "\f0a9";
+      font-size: 14px;
+      padding: 0 8px;
+    }
+  }
+}
+
+/*! end Attribution */
+@include media("<=350px") {
+  .card,
+  .thankYou {
+    width: 300px;
+    padding: 30px 20px;
+  }
+
+  .card .number .rating_number {
+    padding: 12px 15px;
+  }
+}
