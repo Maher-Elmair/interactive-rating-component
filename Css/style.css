@@ -223,4 +223,7 @@ body {
   .card .number .rating_number {
     padding: 12px 15px;
   }
+  .attribution {
+    bottom: 0rem;
+  }
 }/*# sourceMappingURL=style.css.map */
