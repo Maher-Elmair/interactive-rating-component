@@ -214,7 +214,7 @@ body {
 }
 
 /*! end Attribution */
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .container {
     height: 100vh;
   }

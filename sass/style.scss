@@ -201,7 +201,7 @@ body {
 }
 
 /*! end Attribution */
-@include media("<=350px") {
+@include media("<=400px") {
   .container {
     height: 100vh;
   }
