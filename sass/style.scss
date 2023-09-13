@@ -202,6 +202,9 @@ body {
 
 /*! end Attribution */
 @include media("<=350px") {
+  .container {
+    height: 100vh;
+  }
   .card,
   .thankYou {
     width: 300px;

@@ -215,6 +215,9 @@ body {
 
 /*! end Attribution */
 @media (max-width: 350px) {
+  .container {
+    height: 100vh;
+  }
   .card,
   .thankYou {
     width: 300px;
