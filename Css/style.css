@@ -70,6 +70,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 90vh;
 }
 
@@ -214,7 +215,7 @@ body {
 }
 
 /*! end Attribution */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .container {
     height: 100vh;
   }
@@ -227,6 +228,6 @@ body {
     padding: 12px 15px;
   }
   .attribution {
-    bottom: 0rem;
+    position: initial;
   }
 }/*# sourceMappingURL=style.css.map */
